@@ -9,8 +9,8 @@
     <script src="vue.js"></script>
     <script charset="utf-8">
       window.onload=function(){
-        var c = new Vue({
-          el:'#box', // 标签名字或者是id选择器或者是class选择器
+        new Vue({
+          el:'body',
           data: {
               msg:'welcome vue'
           }
@@ -19,9 +19,8 @@
     </script>
   </head>
   <body>
-    <div id="box">
       <input type="text" v-model="msg"/>
       <input type="text" v-model="msg"/>
-    </div>
+      {{msg}}
   </body>
 </html>
