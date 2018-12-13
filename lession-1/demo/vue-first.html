@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta nrme="viewport" content="width=device-width" />
+    <title>Vue first</title>
+    <style type="text/css" media="screen">
+    </style>
+    <script src="vue.js"></script>
+    <script charset="utf-8">
+      window.onload=function(){
+        var c = new Vue({
+          el:'#box',
+          data: {
+              msg:'welcome vue'
+          }
+        })
+      }
+    </script>
+  </head>
+  <body>
+    <div id="box">
+        {{msg}}
+    </div>
+  </body>
+</html>
