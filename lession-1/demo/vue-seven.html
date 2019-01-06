@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta nrme="viewport" content="width=device-width" />
+    <title>Vue six</title>
+    <style type="text/css" media="screen">
+    </style>
+    <script src="vue.js"></script>
+    <script charset="utf-8">
+      window.onload=function(){
+        new Vue({
+          el:'#box',
+          data: {
+              arr: ['apple', 'orange', 'tomato', 'pear'],
+              json: {a:'apple', b:'orange', c:'tomato'}
+          },
+          methods:{
+            add:function(){
+                this.arr.push("potato")
+            }
+          }
+        })
+      }
+    </script>
+  </head>
+  <body>
+    <!-- <div id="box"> -->
+      <!-- <input type="button" value="按钮" onclick="alert(1)"/> -->
+    <!-- </div> -->
+    <div id="box">
+      <input type="button" value="按钮" style="weight:100px;height:100px;background:red" v-on:click="add()"> </input>
+      <input type="button" value="按钮" style="weight:100px;height:100px;background:red" v-on:mouseover="add()"> </input>
+      <input type="button" value="按钮" style="weight:100px;height:100px;background:red" v-on:mouseup="add()"> </input>
+      <input type="button" value="按钮" style="weight:100px;height:100px;background:red" v-on:mouseout="add()"> </input>
+      <input type="button" value="按钮" style="weight:100px;height:100px;background:red" v-on:dblclick="add()"> </input>
+      <hr>
+      {{arr}}
+    </div>
+  </body>
+</html>

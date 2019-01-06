@@ -9,18 +9,23 @@
     <script src="vue.js"></script>
     <script charset="utf-8">
       window.onload=function(){
-          var c = new Vue({
-              el: '#box',
-              data: {
-                  msg:'welcome vue'
-              }
-          })
+        new Vue({
+          el:'#box',
+          data: {
+              arr: ['apple', 'orange', 'tomato', 'pear'],
+              json: {a:'apple', b:'orange', c:'tomato'}
+          }
+        })
       }
     </script>
   </head>
   <body>
     <div id="box">
-        {{msg}}
+      <ul>
+        <li v-for="value in arr"> 
+          {{value}} {{$index}}
+        </li>
+      </ul>
     </div>
   </body>
 </html>
